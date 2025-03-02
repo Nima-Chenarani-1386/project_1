@@ -72,15 +72,33 @@ body.dark__mode #skills .container .skill .skill__bar {
     box-shadow: 0 0 5px 1px white;
 }
 
+body.dark__mode #contact__me .container .form__group:hover .input,
+body.dark__mode #contact__me .container .form__group .input:focus{
+    color: #FFC107;
+}
+
+body.dark__mode #contact__me .container .form__group{
+    color: black;
+}
+
+body.dark__mode #contact__me .container .form__group #message__title{
+    color: white;
+}
+
+body.dark__mode #contact__me .container .form__group #message__title{
+    background-color: var(--background-dark);
+}
+
 body.dark__mode footer {
     background-color: var(--primary-dark);
 }
 
 /* Header */
-header{
+header {
     position: sticky;
 }
-nav{
+
+nav {
     background-color: transparent;
     border-bottom: 1px solid black;
     line-height: 40px;
@@ -89,6 +107,13 @@ nav{
     align-items: center;
     margin-bottom: 5px;
     z-index: 10;
+}
+
+nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 nav li {
@@ -293,7 +318,7 @@ nav ul li a.active__link {
     z-index: 0;
 }
 
-#profilio .container .card__container{
+#profilio .container .card__container {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -304,7 +329,7 @@ nav ul li a.active__link {
 
 #profilio .container .card {
     position: relative;
-    width: 300px;
+    width: 70%;
     height: 350px;
     overflow: hidden;
     box-shadow: 0 0 5px 0 black;
@@ -340,6 +365,7 @@ nav ul li a.active__link {
     text-align: center;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.5));
     color: white;
+
     transition: bottom 0.2s ease;
     -webkit-transition: bottom 0.2s ease;
     -moz-transition: bottom 0.2s ease;
@@ -347,7 +373,7 @@ nav ul li a.active__link {
     -o-transition: bottom 0.2s ease;
 }
 
-#profilio .container .card .card__mask .demo{
+#profilio .container .card .card__mask .demo {
     background-color: black;
     color: white;
     width: 60%;
@@ -361,7 +387,7 @@ nav ul li a.active__link {
     -moz-transition: 0.2s;
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
-    
+
     border-radius: 50px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -369,7 +395,7 @@ nav ul li a.active__link {
     -o-border-radius: 50px;
 }
 
-#profilio .container .card .card__mask .demo:hover{
+#profilio .container .card .card__mask .demo:hover {
     background-color: white;
     color: black;
 }
@@ -487,18 +513,87 @@ footer .footer__section:nth-child(3) {
 @media (max-width: 768px) {
     footer {
         flex-direction: column;
-        /* تغییر جهت به عمودی */
     }
 
     .footer-section {
         border-right: none;
-        /* حذف خط جداکننده */
         border-bottom: 1px solid #555;
-        /* اضافه کردن خط جداکننده پایینی */
     }
 
     .footer-section:last-child {
         border-bottom: none;
-        /* حذف خط جداکننده برای آخرین بخش */
     }
+}
+
+/* Contact me */
+#contact__me {
+    width: 100%;
+    height: 400px;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+#contact__me .container {
+    width: 70%;
+    height: 100%;
+    margin: 20px auto;
+}
+
+#contact__me .container .form__group{
+    width: 50%;
+    padding: 5px;
+    margin: 20px auto;
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#contact__me .container .form__group .input{
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    border: none;
+}
+
+#contact__me .container .form__group #message__input{
+    resize: none; 
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+}
+
+#contact__me .container .form__group #message__title{
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background-color: white;
+}
+
+#contact__me .container #submit{
+    width: 50%;
+    padding: 5px;
+    margin: 20px auto;
+    border: 1px solid black;
+    background-color: var(--negative-light);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    font-size: 1.1em;
+    
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
