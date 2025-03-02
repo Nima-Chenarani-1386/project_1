@@ -77,8 +77,10 @@ body.dark__mode footer {
 }
 
 /* Header */
-
-nav#navbar {
+header{
+    position: sticky;
+}
+nav{
     background-color: transparent;
     border-bottom: 1px solid black;
     line-height: 40px;
