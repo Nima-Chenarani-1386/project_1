@@ -72,15 +72,29 @@ body.dark__mode #skills .container .skill .skill__bar {
     box-shadow: 0 0 5px 1px white;
 }
 
+body.dark__mode #contact__me .container .from__content__article {
+    background-color: var(--negative-light);
+}
+
+body.dark__mode #contact__me .container .from__content__article:hover .content__input,
+body.dark__mode #contact__me .container .from__content__article .content__input:focus {
+    color: #FFC107;
+}
+
+body.dark__mode #contact__me .container .from__content__article:hover {
+    box-shadow: 0 0 5px 0 #FFC107;
+}
+
 body.dark__mode footer {
     background-color: var(--primary-dark);
 }
 
 /* Header */
-header{
+header {
     position: sticky;
 }
-nav{
+
+nav {
     background-color: transparent;
     border-bottom: 1px solid black;
     line-height: 40px;
@@ -89,6 +103,13 @@ nav{
     align-items: center;
     margin-bottom: 5px;
     z-index: 10;
+}
+
+nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 nav li {
@@ -293,7 +314,7 @@ nav ul li a.active__link {
     z-index: 0;
 }
 
-#profilio .container .card__container{
+#profilio .container .card__container {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -347,7 +368,7 @@ nav ul li a.active__link {
     -o-transition: bottom 0.2s ease;
 }
 
-#profilio .container .card .card__mask .demo{
+#profilio .container .card .card__mask .demo {
     background-color: black;
     color: white;
     width: 60%;
@@ -361,7 +382,7 @@ nav ul li a.active__link {
     -moz-transition: 0.2s;
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
-    
+
     border-radius: 50px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -369,7 +390,7 @@ nav ul li a.active__link {
     -o-border-radius: 50px;
 }
 
-#profilio .container .card .card__mask .demo:hover{
+#profilio .container .card .card__mask .demo:hover {
     background-color: white;
     color: black;
 }
@@ -487,18 +508,79 @@ footer .footer__section:nth-child(3) {
 @media (max-width: 768px) {
     footer {
         flex-direction: column;
-        /* تغییر جهت به عمودی */
     }
 
     .footer-section {
         border-right: none;
-        /* حذف خط جداکننده */
         border-bottom: 1px solid #555;
-        /* اضافه کردن خط جداکننده پایینی */
     }
 
     .footer-section:last-child {
         border-bottom: none;
-        /* حذف خط جداکننده برای آخرین بخش */
     }
+}
+
+/* Contact me */
+#contact__me {
+    width: 100%;
+    height: 400px;
+    flex-direction: column;
+}
+
+#contact__me .container {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#contact__me .container form .from__content__article {
+    margin: 20px auto;
+    width: 50%;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    box-shadow: 0 0 3px 0 black;
+    background-color: white;
+
+    transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+#contact__me .container form .from__content__article .content__input {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 5px;
+    background-color: transparent;
+
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    transition: 0.2s;
+
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+
+#contact__me .container form .from__content__article:hover {
+    box-shadow: 0 0 5px 1px black;
+}
+
+#contact__me .container form .from__content__article .content__title {
+    color: black;
 }
