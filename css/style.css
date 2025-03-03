@@ -72,32 +72,28 @@ body.dark__mode #skills .container .skill .skill__bar {
     box-shadow: 0 0 5px 1px white;
 }
 
+body.dark__mode #contact__me .container .form__group:hover {
+    box-shadow: 0 0 5px 0 #FFC107;
+}
+
+body.dark__mode #contact__me .container .form__group #message__input:hover,
+body.dark__mode #contact__me .container .form__group #message__input:focus,
 body.dark__mode #contact__me .container .form__group:hover .input,
-body.dark__mode #contact__me .container .form__group .input:focus{
+body.dark__mode #contact__me .container .form__group .input:focus {
     color: #FFC107;
 }
 
-body.dark__mode #contact__me .container .form__group{
+body.dark__mode #contact__me .container .form__group {
     color: black;
+    background-color: #015acf; 
 }
 
-body.dark__mode #contact__me .container .form__group #message__title{
+body.dark__mode #contact__me .container .form__group #message__title {
     color: white;
-}
-
-body.dark__mode #contact__me .container .form__group #message__title{
     background-color: var(--background-dark);
 }
-body.dark__mode #contact__me .container .from__content__article {
-    background-color: var(--negative-light);
-}
 
-body.dark__mode #contact__me .container .from__content__article:hover .content__input,
-body.dark__mode #contact__me .container .from__content__article .content__input:focus {
-    color: #FFC107;
-}
-
-body.dark__mode #contact__me .container .from__content__article:hover {
+body.dark__mode #contact__me .container .form__group:hover{
     box-shadow: 0 0 5px 0 #FFC107;
 }
 
@@ -497,6 +493,98 @@ nav ul li a.active__link {
     border-bottom-right-radius: 50px;
 }
 
+#contact__me {
+    width: 100%;
+    height: 400px;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+#contact__me .container {
+    width: 70%;
+    height: 100%;
+    margin: 70px auto;
+}
+
+#contact__me .container .form__group {
+    width: 50%;
+    padding: 5px;
+    margin: 20px auto;
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    
+    transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+}
+
+#contact__me .container .form__group:hover{
+    box-shadow: 0 0 5px 0 black;
+}
+
+#contact__me .container .form__group .input {
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    border: none;
+}
+
+#contact__me .container .form__group * {
+    background-color: transparent;
+
+    transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+}
+
+#contact__me .container .form__group #message__input {
+    resize: none;
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+}
+
+#contact__me .container .form__group #message__title {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background-color: white;
+}
+
+#contact__me .container #submit {
+    width: 50%;
+    padding: 5px;
+    margin: 20px auto;
+    border: 1px solid black;
+    background-color: var(--negative-light);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    font-size: 1.1em;
+
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
 /* Footer */
 footer {
     width: 100%;
@@ -535,77 +623,4 @@ footer .footer__section:nth-child(3) {
     .footer-section:last-child {
         border-bottom: none;
     }
-}
-
-/* Contact me */
-#contact__me {
-    width: 100%;
-    height: 400px;
-    flex-direction: column;
-    margin-top: 5px;
-}
-
-#contact__me .container {
-    width: 70%;
-    height: 100%;
-    margin: 20px auto;
-}
-
-#contact__me .container .form__group{
-    width: 50%;
-    padding: 5px;
-    margin: 20px auto;
-    border: 1px solid black;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    position: relative;
-    
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-}
-
-#contact__me .container .form__group .input{
-    width: 100%;
-    height: 100%;
-    margin: 5px;
-    border: none;
-}
-
-#contact__me .container .form__group #message__input{
-    resize: none; 
-    width: 100%;
-    height: 100%;
-    margin: 5px;
-}
-
-#contact__me .container .form__group #message__title{
-    position: absolute;
-    top: -10px;
-    left: 20px;
-    background-color: white;
-}
-
-#contact__me .container #submit{
-    width: 50%;
-    padding: 5px;
-    margin: 20px auto;
-    border: 1px solid black;
-    background-color: var(--negative-light);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    position: relative;
-    font-size: 1.1em;
-    
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
 }
