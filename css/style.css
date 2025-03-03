@@ -73,21 +73,22 @@ body.dark__mode #skills .container .skill .skill__bar {
 }
 
 body.dark__mode #contact__me .container .form__group:hover .input,
-body.dark__mode #contact__me .container .form__group .input:focus{
+body.dark__mode #contact__me .container .form__group .input:focus {
     color: #FFC107;
 }
 
-body.dark__mode #contact__me .container .form__group{
+body.dark__mode #contact__me .container .form__group {
     color: black;
 }
 
-body.dark__mode #contact__me .container .form__group #message__title{
+body.dark__mode #contact__me .container .form__group #message__title {
     color: white;
 }
 
-body.dark__mode #contact__me .container .form__group #message__title{
+body.dark__mode #contact__me .container .form__group #message__title {
     background-color: var(--background-dark);
 }
+
 body.dark__mode #contact__me .container .from__content__article {
     background-color: var(--negative-light);
 }
@@ -551,7 +552,7 @@ footer .footer__section:nth-child(3) {
     margin: 20px auto;
 }
 
-#contact__me .container .form__group{
+#contact__me .container .form__group {
     width: 50%;
     padding: 5px;
     margin: 20px auto;
@@ -561,7 +562,7 @@ footer .footer__section:nth-child(3) {
     align-items: center;
     justify-content: space-evenly;
     position: relative;
-    
+
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -569,28 +570,28 @@ footer .footer__section:nth-child(3) {
     -o-border-radius: 20px;
 }
 
-#contact__me .container .form__group .input{
+#contact__me .container .form__group .input {
     width: 100%;
     height: 100%;
     margin: 5px;
     border: none;
 }
 
-#contact__me .container .form__group #message__input{
-    resize: none; 
+#contact__me .container .form__group #message__input {
+    resize: none;
     width: 100%;
     height: 100%;
     margin: 5px;
 }
 
-#contact__me .container .form__group #message__title{
+#contact__me .container .form__group #message__title {
     position: absolute;
     top: -10px;
     left: 20px;
     background-color: white;
 }
 
-#contact__me .container #submit{
+#contact__me .container #submit {
     width: 50%;
     padding: 5px;
     margin: 20px auto;
@@ -602,7 +603,7 @@ footer .footer__section:nth-child(3) {
     justify-content: space-evenly;
     position: relative;
     font-size: 1.1em;
-    
+
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
