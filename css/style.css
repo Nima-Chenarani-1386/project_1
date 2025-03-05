@@ -80,12 +80,12 @@ body.dark__mode #contact__me .container .form__group #message__input:hover,
 body.dark__mode #contact__me .container .form__group #message__input:focus,
 body.dark__mode #contact__me .container .form__group:hover .input,
 body.dark__mode #contact__me .container .form__group .input:focus {
-    color: #FFC107;
+    color: white;
 }
 
 body.dark__mode #contact__me .container .form__group {
     color: black;
-    background-color: #015acf; 
+    background-color: #007BFF; 
 }
 
 body.dark__mode #contact__me .container .form__group #message__title {
