@@ -85,15 +85,15 @@ body.dark__mode #contact__me .container .form__group .input:focus {
 
 body.dark__mode #contact__me .container .form__group {
     color: black;
-    background-color: #007BFF; 
+    background-color: #007BFF;
 }
 
 body.dark__mode #contact__me .container .form__group #message__title {
     color: white;
-    background-color: var(--background-dark);
+    background-color: transparent;
 }
 
-body.dark__mode #contact__me .container .form__group:hover{
+body.dark__mode #contact__me .container .form__group:hover {
     box-shadow: 0 0 5px 0 #FFC107;
 }
 
@@ -522,7 +522,7 @@ nav ul li a.active__link {
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-    
+
     transition: 0.2s ease;
     -webkit-transition: 0.2s ease;
     -moz-transition: 0.2s ease;
@@ -530,7 +530,7 @@ nav ul li a.active__link {
     -o-transition: 0.2s ease;
 }
 
-#contact__me .container .form__group:hover{
+#contact__me .container .form__group:hover {
     box-shadow: 0 0 5px 0 black;
 }
 
@@ -615,12 +615,12 @@ footer .footer__section:nth-child(3) {
         flex-direction: column;
     }
 
-    .footer-section {
+    .footer__section {
         border-right: none;
         border-bottom: 1px solid #555;
     }
 
-    .footer-section:last-child {
+    .footer__section:last-child {
         border-bottom: none;
     }
 }
