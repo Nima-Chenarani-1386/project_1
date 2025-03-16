@@ -52,6 +52,10 @@ body.dark__mode #theme__toggle {
     color: var(--background-dark);
 }
 
+body.dark__mode nav {
+    background-color: var(--background-dark);
+}
+
 body.dark__mode a {
     color: var(--secondary-dark);
 }
@@ -129,11 +133,11 @@ body.dark__mode footer {
 
 /* Header */
 header {
-    position: sticky;
+    position: relative;
 }
 
 nav {
-    background-color: transparent;
+    background-color: var(--background-light);
     border-bottom: 1px solid black;
     line-height: 40px;
     display: flex;
@@ -141,13 +145,19 @@ nav {
     align-items: center;
     margin-bottom: 5px;
     z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
 }
 
 nav.fixed {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
 }
 
 nav li {
@@ -171,6 +181,7 @@ nav ul li a::after {
     width: 0%;
     height: 2px;
     background: #003064;
+    box-shadow: 0 0 5px 0 #03DAC6;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -191,7 +202,7 @@ nav ul li a::after {
 nav ul li:hover a,
 nav ul li a.active__link {
     color: #003064;
-    text-shadow: 0 0 5px #003064;
+    text-shadow: 0 0 5px #03DAC6;
 }
 
 nav ul li:hover a::after,
@@ -231,10 +242,8 @@ nav ul li a.active__link::after {
     font-size: 0.9em;
 }
 
-nav#resposive__navbar {
-    width: 100%;
-    height: auto;
-    border: 1px solid black;
+#responsive__nabvar {
+    display: none;
 }
 
 /* Section */
@@ -429,7 +438,7 @@ nav#resposive__navbar {
     bottom: -150px;
     left: 0;
     width: 100%;
-    height: 40%;
+    height: 50%;
     padding: 20px;
     text-align: center;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.5));
@@ -442,7 +451,7 @@ nav#resposive__navbar {
     -o-transition: bottom 0.2s ease;
 }
 
-#profilio .container .card .card__mask .demo {
+#profilio .container .card .card__mask button.demo {
     background-color: black;
     color: white;
     width: 60%;
@@ -464,7 +473,7 @@ nav#resposive__navbar {
     -o-border-radius: 50px;
 }
 
-#profilio .container .card .card__mask .demo:hover {
+#profilio .container .card .card__mask button.demo:hover {
     background-color: white;
     color: black;
 }

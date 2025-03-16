@@ -1,17 +1,19 @@
 // definde variables 
 const theme_toggle_button = document.getElementById('theme__toggle');
 const body = document.body;
-// const nav = document.getElementById('navbar'); 
+const navbar = document.querySelector("#navbar");
 
 // Click functions
 theme_toggle_button.addEventListener('click', () => {
     document.body.classList.toggle('dark__mode')
 });
 
+// Scroll functions
 window.addEventListener('scroll', () => {
-    if (window.scroll >= 100) {
-        document.querySelector('#navbar').classList.add('fixed');
+    if (window.scrollY >= 10) {
+        navbar.classList.add('fixed'); 
+        
     } else {
-        document.querySelector('#navbar').classList.remove('fixed');
+        navbar.classList.remove('fixed'); 
     }
 }); 
