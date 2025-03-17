@@ -1,18 +1,20 @@
 /* Include src's */
 :root {
-    /* حالت روشن (Light Mode) */
+    /* Light mode pallete */
     --background-light: #FFFFFF;
     --text-light: #333333;
     --primary-light: #007BFF;
     --secondary-light: #0051ff;
     --negative-light: #003064;
-
-    /* حالت تاریک (Dark Mode) */
+    --alpha-light: rgba(255, 255, 255, 0.2); 
+    
+    /* Dark mode pallete */
     --background-dark: #121212;
     --text-dark: #E0E0E0;
     --primary-dark: #BB86FC;
     --secondary-dark: #03DAC6;
     --negative-dark: #b3b3b3;
+    --alpha-dark: rgba(0, 0, 0, 0.2); 
 }
 
 /* @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); */
@@ -47,7 +49,7 @@ body.dark__mode {
     color: var(--text-dark);
 }
 
-body.dark__mode #theme__toggle {
+body.dark__mode .theme__toggle {
     background-color: var(--secondary-dark);
     color: var(--background-dark);
 }
@@ -56,30 +58,40 @@ body.dark__mode nav {
     background-color: var(--background-dark);
 }
 
+body.dark__mode nav .menu__toggle{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 body.dark__mode a {
     color: var(--secondary-dark);
 }
 
 body.dark__mode nav ul li a::after {
     content: '';
-    width: 0%;
     height: 2px;
     background: #e0e0e0;
     position: absolute;
     bottom: 0;
     left: 0;
-
+    
     transition: 0.2s;
     -webkit-transition: 0.2s;
     -moz-transition: 0.2s;
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
-
+    
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+    
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform-origin: left;
 }
 
 body.dark__mode nav ul li:hover a,
@@ -90,7 +102,11 @@ body.dark__mode nav ul li a.active__link {
 
 body.dark__mode nav ul li:hover a::after,
 body.dark__mode nav ul li a.active__link::after {
-    width: 100%;
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
 }
 
 body.dark__mode #skills .container .skill {
@@ -106,16 +122,8 @@ body.dark__mode #contact__me .container .form__group:hover {
     box-shadow: 0 0 5px 0 #FFC107;
 }
 
-body.dark__mode #contact__me .container .form__group #message__input:hover,
-body.dark__mode #contact__me .container .form__group #message__input:focus,
-body.dark__mode #contact__me .container .form__group:hover .input,
-body.dark__mode #contact__me .container .form__group .input:focus {
-    color: white;
-}
-
 body.dark__mode #contact__me .container .form__group {
     color: black;
-    background-color: #007BFF;
 }
 
 body.dark__mode #contact__me .container .form__group #message__title {
@@ -210,7 +218,7 @@ nav ul li a.active__link::after {
     width: 100%;
 }
 
-#theme__toggle {
+.theme__toggle {
     background: var(--primary-light);
     color: var(--text-dark);
     display: flex;
@@ -233,7 +241,7 @@ nav ul li a.active__link::after {
     -o-transition: 0.5s ease;
 }
 
-#theme__toggle:hover {
+.theme__toggle:hover {
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -242,8 +250,19 @@ nav ul li a.active__link::after {
     font-size: 0.9em;
 }
 
-#responsive__nabvar {
-    display: none;
+.menu__toggle{
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    margin: 5px;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 /* Section */
@@ -680,7 +699,12 @@ footer .footer__section:nth-child(3) {
     flex: 1;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
+    nav .menu__toggle{
+        display: block;
+    }
+    
     footer {
         flex-direction: column;
     }

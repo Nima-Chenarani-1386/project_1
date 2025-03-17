@@ -1,11 +1,11 @@
 // definde variables 
-const theme_toggle_button = document.getElementById('theme__toggle');
+const theme_toggle_button = document.querySelector('.theme__toggle');
 const body = document.body;
 const navbar = document.querySelector("#navbar");
 
 // Click functions
 theme_toggle_button.addEventListener('click', () => {
-    document.body.classList.toggle('dark__mode')
+    document.body.classList.toggle('dark__mode'); 
 });
 
 // Scroll functions
